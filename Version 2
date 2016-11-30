@@ -1,0 +1,42 @@
+###checking a value in a list has changed###
+device_status = [1,0,0]
+device_status2 = [1,1,1]
+#print (type(device_status))
+x=0
+
+Dictionary_Online = {"0": "Internet is Online", "1": "Raspberry Pi Online", "2": "Dan's Phone Online"}
+Dictionary_Offline = {"0": "Hub OFF", "1": "Pi OFF", "2": "Phone OFF"}
+
+#print (Dictionary_Online["0"])
+
+for i in device_status2:
+    if i == device_status[x]:
+        #print (i)
+        print ("same")
+        #print(i)
+        x = x + 1
+        #print ("x =, ", x)
+        print ("")
+    else:
+        #print (i)
+        #print (type(i))
+        print ("change")
+        #change =  True
+        #if change == True:
+        print ("Number", x, "changed")
+        #i = str(i)
+        x = str(x)
+        ####check for changes and pull out voice annoucement#####
+        if i == 0:
+            #i = str(i)
+            print ("went off")
+            print (Dictionary_Offline[x])
+            print ("")
+        elif i == 1:
+            print ("Went on")
+            print (Dictionary_Online[x])
+            print("")
+        x = int(x)
+        x = x + 1
+        
+    
